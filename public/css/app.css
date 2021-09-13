@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .post-card {
+  border: 1px solid blue;
+  width: calc(100% / 2);
+}
+

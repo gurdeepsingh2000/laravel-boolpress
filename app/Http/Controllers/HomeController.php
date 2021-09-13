@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function index(){
         $allPosts = Post::all();
-        return view('welcome','allPosts');
+        return view('HomePage',compact('allPosts'));
     }
 }
