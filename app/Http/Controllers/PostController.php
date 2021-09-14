@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -12,13 +13,13 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-        public function publicSection(){
-            return view('public');
-        }
+     public function index(){
+        $allPosts = Post::All();
+        return view('posts.index', compact('allPosts'));
+     }
 
-        public function privateSection(){
-            return view('private');
-        }
+     
+     
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

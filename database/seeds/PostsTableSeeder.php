@@ -19,7 +19,6 @@ class PostsTableSeeder extends Seeder
             $PostObj->surname = $faker->name(1);
             $PostObj->likes = $faker->numberBetween(0, 90000);
             $PostObj->comments = $faker->numberBetween(0, 90000);
-            $PostObj->comments = $faker->numberBetween(0, 90000);
             $PostObj->cover = $faker->imageUrl(640, 480, 'animals', true);
             $PostObj->place = $faker->countryCode();
             $PostObj->save();

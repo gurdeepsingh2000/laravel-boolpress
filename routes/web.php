@@ -17,6 +17,11 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/public', 'PostController@publicSection');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/private', 'PostController@privateSection')->middleware('auth');
+Route::get('/public', 'PagesController@publicSection');
+
+Route::get('/private', 'PagesController@privateSection')->middleware('auth');
+
+
+Route::resource('posts','PostController');
