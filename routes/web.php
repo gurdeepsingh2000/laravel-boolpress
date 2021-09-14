@@ -13,15 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->middleware('auth');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/public', 'PagesController@publicSection');
-
-Route::get('/private', 'PagesController@privateSection')->middleware('auth');
-
-
-Route::resource('posts','PostController');
+Route::resource('posts','PostController')->middleware('auth');
