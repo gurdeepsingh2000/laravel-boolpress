@@ -17,3 +17,6 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
+Route::get('/public', 'PostController@publicSection');
+
+Route::get('/private', 'PostController@privateSection')->middleware('auth');
