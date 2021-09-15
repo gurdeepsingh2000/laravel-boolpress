@@ -10948,3 +10948,11 @@ a.text-dark:focus {
   border-radius: 25px;
 }
 
+.img-size {
+  width: 400px;
+}
+
+.img-size img {
+  width: 100%;
+}
+
