@@ -27,7 +27,7 @@
         <td>{{$posts->surname}}</td>
         <td>{{$posts->likes}}</td>
         <td>{{$posts->comments}}</td>
-        <td>{{$posts->Place}}</td>
+        <td>{{$posts->Place}} <img src="https://www.countryflags.io/{{$posts->Place}}/flat/64.png" alt=""></td>
         <td><img src="{{$posts->cover}}" alt='posted by {{$posts->name , $posts->surname}}'></td>
         <td><a href="/posts/{{$posts->id}}"><i class="bi bi-box-arrow-right"></i></a></td>
       </tr>

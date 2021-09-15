@@ -49,6 +49,7 @@
                                 </li>
                             @endif
                         @else
+                        <li class='py-2 mx-2'><a href="{{route('home')}}">Home</a></li>
                             <li class='py-2'><a href="{{route('posts.index','table')}}">DB Posts</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
