@@ -16475,6 +16475,14 @@ a.text-dark:focus {
   width: 100%;
 }
 
+.cover .img-container {
+  width: 500px;
+}
+
+.cover .img-container img {
+  width: 100%;
+}
+
 body {
   background-color: #fcde67;
 }

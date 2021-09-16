@@ -2,18 +2,19 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container d-flex justify-content-center align-conter-center">
+        <div class="create-post">
         <form action=" {{ route( 'posts.store' )}}" method='post'>
             @csrf
 
             <label for="name">Nome</label>
-            <input type="text" name="name" id="name">
+            <input class='input-text' type="text" name="name" id="name">
 
             <br>
 
 
             <label for="surname">Cognome</label>
-            <input type="text" name="surname" id="surname">
+            <input class='input-text' type="text" name="surname" id="surname">
 
             <br>
 
@@ -33,14 +34,17 @@
 
 
             <label for="cover">Image</label>
-            <input type="text" name="cover"  id="cover">
+            <input class='input-text' type="text" name="cover"  id="cover">
 
             <br>
 
 
             <select name="Place" id="Place">
                 <option value="IT">ITALIANO</option>
-                <option value="EN">ITALIANO</option>
+                <option value="EN">INGLESE</option>
+                <option value="ES">SPAGNOLO</option>
+                <option value="DE">TEDESCO</option>
+                <option value="JP">GIAPPONESE</option>
             </select>
             
 
@@ -50,6 +54,8 @@
             <input type="submit" value='Invia'>
 
         </form>
+
+        </div>
     </div>
 
 @endsection
