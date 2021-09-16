@@ -10942,20 +10942,6 @@ a.text-dark:focus {
   }
 }
 
-.post-card {
-  border: 1px solid grey;
-  padding: 20px;
-  border-radius: 25px;
-}
-
-.img-size {
-  width: 400px;
-}
-
-.img-size img {
-  width: 100%;
-}
-
 @font-face {
   font-family: "bootstrap-icons";
   src: url(/fonts/vendor/bootstrap-icons/bootstrap-icons.woff2?e07b538aa51b6fa77f32828af21cb591) format("woff2"), url(/fonts/vendor/bootstrap-icons/bootstrap-icons.woff?7fb23f3b56a834d9dcf615b5e7c78da8) format("woff");
@@ -16453,5 +16439,43 @@ a.text-dark:focus {
 
 .bi-safe::before {
   content: "\F65A";
+}
+
+.post-card {
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.img-size {
+  width: 400px;
+}
+
+.img-size img {
+  width: 100%;
+}
+
+#app .navbar {
+  background-color: #5bccf6 !important;
+}
+
+#app .navbar a {
+  color: black;
+}
+
+#app .menu-bar li a {
+  color: black;
+}
+
+#user-posts tr td .img-container {
+  width: 280px;
+}
+
+#user-posts tr td .img-container img {
+  width: 100%;
+}
+
+body {
+  background-color: #fcde67;
 }
 

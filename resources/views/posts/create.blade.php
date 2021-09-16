@@ -38,8 +38,11 @@
             <br>
 
 
-            <label for="Place">Country</label>
-            <input type="text" name="Place"  id="Place">
+            <select name="Place" id="Place">
+                <option value="IT">ITALIANO</option>
+                <option value="EN">ITALIANO</option>
+            </select>
+            
 
             <br>
 

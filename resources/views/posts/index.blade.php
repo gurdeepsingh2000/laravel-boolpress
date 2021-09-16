@@ -18,8 +18,7 @@
     </thead>
 
 
-<a href="">
-    <tbody>
+    <tbody id="user-posts">
     @foreach($allPosts as $posts)
       <tr>
         <th scope="row">{{$posts->id}}</th>
@@ -27,15 +26,14 @@
         <td>{{$posts->surname}}</td>
         <td>{{$posts->likes}}</td>
         <td>{{$posts->comments}}</td>
-        <td>{{$posts->Place}} <img src="https://www.countryflags.io/{{$posts->Place}}/flat/64.png" alt=""></td>
-        <td><img src="{{$posts->cover}}" alt='posted by {{$posts->name , $posts->surname}}'></td>
-        <td><a href="/posts/{{$posts->id}}"><i class="bi bi-box-arrow-right"></i></a></td>
+        <td>{{$posts->Place}} <img src="https://www.countryflags.io/{{$posts->Place}}/flat/64.png"></td>
+        <td><div class="img-container"><img src="{{$posts->cover}}" alt='posted by {{$posts->name , $posts->surname}}'></div></td>
+        <td><button><a href="/posts/{{$posts->id}}">Check this post</a></button></td>
       </tr>
   @endforeach
-</a>
+
 
     </tbody>
   </table>
-
 </div>
 @endsection

@@ -7,9 +7,17 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+//Routes
 @import 'content';
 @import 'welcome';
-@import 'home';
+@import 'app';
+@import'index';
 
-@import '~bootstrap-icons/font/bootstrap-icons';
+//styles
+
+body{
+    background-color: #fcde67;
+}
 
