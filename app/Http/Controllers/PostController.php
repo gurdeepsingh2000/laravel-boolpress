@@ -16,6 +16,7 @@ class PostController extends Controller
      public function index(){
         $allPosts = Post::All();
         return view('posts.index', compact('allPosts'));
+        
      }
 
      
@@ -28,7 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        
+       return view('posts.create');
     }
 
     /**
@@ -39,7 +40,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newPost = new Post();
+        $newPost->name = $data['name'];
+        $newPost->surname = $data['surname'];
+        $newPost->likes = $data['likes'];
+        $newPost->comments = $data['comments'];
+        $newPost->cover = $data['cover'];
+        $newPost->place = $data['Place'];
+        $newPost->save();
+
+        return redirect()->route('posts.show',$newPost->id);
     }
 
     /**
@@ -52,6 +63,8 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         return view('posts.show', compact('post'));
+       dd('post');
+
     }
 
     /**

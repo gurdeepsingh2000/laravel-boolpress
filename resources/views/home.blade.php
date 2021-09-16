@@ -17,6 +17,7 @@
 
 
     <div class="container">
+        <a href="{{route('posts.create')}}"><span><i class="far fa-calendar-plus"></i> Add New Post</span></a>
         <div class="row justify-content-center text-center">
             @foreach($allPosts as $post)
             <div class="post-card py-5">
