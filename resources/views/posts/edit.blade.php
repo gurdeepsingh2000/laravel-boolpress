@@ -4,7 +4,7 @@
 
     <div class="container d-flex justify-content-center align-conter-center">
         <div class="create-post">
-        <form action=" {{ route( 'posts.index' )}}" method="POST">
+        <form action=" {{ route( 'posts.update', $post )}}" method="POST">
             
             @csrf
             @method('PUT')

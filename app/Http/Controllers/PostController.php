@@ -86,7 +86,7 @@ class PostController extends Controller
     {
         $data = $request->all();
 
-        $post->update($data);
+        $this->fillAllValues($post, $data);
 
         return redirect()->route('posts.show', $post);
 
@@ -101,5 +101,15 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    private function fillAllValues(Post $post, $data){
+        $post->name = $data['name'];
+        $post->surname = $data['surname'];
+        $post->likes = $data['likes'];
+        $post->comments = $data['comments'];
+        $post->place = $data['Place'];
+        $post->save();
     }
 }
