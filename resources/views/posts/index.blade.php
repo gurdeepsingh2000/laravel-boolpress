@@ -30,7 +30,7 @@
         <td><div class="img-container"><img src="{{$posts->cover}}" alt='posted by {{$posts->name , $posts->surname}}'></div></td>
         <td>
           <a href="/posts/{{$posts->id}}"><button><i class="fas fa-plus-square"></i></button></a>
-          <a href="">
+          <a href="{{route('posts.edit', $posts)}}"><button><i class="far fa-edit"></i></button></a>
 
             <form action="{{ route ('posts.destroy' , $posts) }}" method='POST'>
               @csrf
