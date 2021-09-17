@@ -23,14 +23,14 @@
 
 
             <label for="likes">Likes</label>
-            <input type="number" name="likes" value="0" id="likes" value= "{{ $post->likes }}">
+            <input type="number" name="likes" id="likes" value= "{{ $post->likes }}">
 
             <br>
 
 
 
             <label for="comments">Comments</label>
-            <input type="number" name="comments" value="0" id="comments" value= "{{ $post->comments }}">
+            <input type="number" name="comments" id="comments" value= "{{ $post->comments }}">
 
             <br>
 

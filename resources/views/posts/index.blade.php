@@ -28,7 +28,19 @@
         <td>{{$posts->comments}}</td>
         <td>{{$posts->Place}} <img src="https://www.countryflags.io/{{$posts->Place}}/flat/64.png"></td>
         <td><div class="img-container"><img src="{{$posts->cover}}" alt='posted by {{$posts->name , $posts->surname}}'></div></td>
-        <td><button><a href="/posts/{{$posts->id}}">Check this post</a></button></td>
+        <td>
+          <a href="/posts/{{$posts->id}}"><button><i class="fas fa-plus-square"></i></button></a>
+          <a href="">
+
+            <form action="{{ route ('posts.destroy' , $posts) }}" method='POST'>
+              @csrf
+
+              @method('DELETE')
+
+              <button type="submit" class="btn btn-danger"><i class="fas fa-dumpster"></i></button>
+            </form>
+        </td>
+        
       </tr>
   @endforeach
 
