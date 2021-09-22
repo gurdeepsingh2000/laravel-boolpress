@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Rollback extends Migration
+class CreatePostGenresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class Rollback extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('post_genre', function (Blueprint $table) {
             $table->id();
             $table->string('name',50);
-            $table->string('surname',50);
-            $table->unsignedMediumInteger('likes');
-            $table->text('cover');
-            $table->unsignedMediumInteger('comments');
-            $table->string('Place',100);
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class Rollback extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('post_genres');
     }
 }
