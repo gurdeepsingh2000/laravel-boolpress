@@ -13,7 +13,23 @@ class PostsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+
+        $genereList = [
+            'thriller',
+            'avventura',
+            'azione',
+            'romanzo',
+            'biografia',
+            'fantascienza'
+        ];
+
         for($i = 0; $i < 50; $i++){
+            $postGenre = new PostGenre();
+            $genreKey = array_rand($genereList, 1);
+            $genre = $genereList[$genreKey];
+            $postGenre->name = $genre;
+            $postGenre->save();
+
             $PostObj = new Post();
             $PostObj->name = $faker->name(1);
             $PostObj->surname = $faker->name(1);

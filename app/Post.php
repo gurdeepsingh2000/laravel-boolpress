@@ -13,4 +13,8 @@ class Post extends Model
         'likes',
         'Place',
     ];
+
+    public function PostGenre() {
+        return $this->belongsTo(PostGenre::class);
+    }
 }
