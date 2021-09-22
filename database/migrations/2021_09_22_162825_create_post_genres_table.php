@@ -13,9 +13,8 @@ class CreatePostGenresTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_genre', function (Blueprint $table) {
+        Schema::create('post_genres', function (Blueprint $table) {
             $table->id();
-            $table->string('name',50);
             $table->timestamps();
         });
     }
